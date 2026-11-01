@@ -9,13 +9,16 @@ export default function Navbar() {
 
   return (
     <header className="flex h-16 items-center justify-between border-b bg-background px-6">
-      <div className="flex items-center gap-2">
+      <Link
+        to="/"
+        className="flex items-center gap-2 rounded-md transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      >
         <PenSquare className="h-5 w-5" />
         <div className="flex flex-col leading-tight">
           <span className="text-sm font-semibold">AI 小说创作工作台</span>
           <span className="text-[11px] text-muted-foreground">AI Novel Production Engine</span>
         </div>
-      </div>
+      </Link>
       {isHome ? (
         <Button asChild size="sm" variant="outline">
           <Link to="/settings/model-routes">模型设置</Link>
