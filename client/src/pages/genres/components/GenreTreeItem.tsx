@@ -40,6 +40,7 @@ export default function GenreTreeItem({
               }
             }}
             aria-label={expanded ? "折叠" : "展开"}
+            aria-expanded={expanded}
           >
             {hasChildren ? (
               expanded ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />
